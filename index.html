@@ -586,7 +586,7 @@
 
             try {
                 // 🔥 API de MyMemory (Totalmente gratis, sin API KEY)
-                const url = \`https://api.mymemory.translated.net/get?q=\${encodeURIComponent(text)}&langpair=en|es\`;
+                const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|es`;
                 const res = await fetch(url);
                 const data = await res.json();
 
@@ -608,7 +608,7 @@
                 currentPopup.innerHTML = `
                     <button class="close-btn" onclick="this.parentElement.remove(); currentPopup = null;">×</button>
                     <h3>Error</h3>
-                    <div class="original-text">"\${text}"</div>
+                    <div class="original-text">"${text}"</div>
                     <div class="translated-text" style="color: #fc8181;">
                         Error al traducir. Intenta nuevamente.
                     </div>
